@@ -1,0 +1,67 @@
+{
+  "_about": "Shape references from a recorded podracer race (2026-10-16): slip stays under 4 deg (p90 3.3), lateral g p90 27 (more than twice the car's), impact p99 9500. Tested in game on a MOZA R3 (2026-10-16). Heavy and stable for the top speeds, slightly wider lock, strong engine and boost vibration, longer impact kicks.",
+  "SteeringLockDegrees": 200,
+  "SteeringLinearity": 1,
+  "SteeringAntiDeadzone": 0.31,
+  "InvertSteering": false,
+  "PedalDeadzone": 0.03,
+  "Ffb": {
+    "Layers": {
+      "Centering": {
+        "Gain": 0.55,
+        "Enabled": true
+      },
+      "Aligning": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Load": {
+        "Gain": 0.45,
+        "Enabled": true
+      },
+      "Damping": {
+        "Gain": 0.35,
+        "Enabled": true
+      },
+      "Impacts": {
+        "Gain": 0.9,
+        "Enabled": true
+      },
+      "Scrape": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Road": {
+        "Gain": 0.15,
+        "Enabled": true
+      },
+      "Engine": {
+        "Gain": 0.35,
+        "Enabled": true
+      },
+      "Boost": {
+        "Gain": 0.45,
+        "Enabled": true
+      },
+      "Landing": {
+        "Gain": 0.5,
+        "Enabled": true
+      },
+      "Rumble": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Lean": {
+        "Gain": 0,
+        "Enabled": true
+      }
+    },
+    "AligningPeakSlipDeg": 3,
+    "LoadReference": 30,
+    "ImpactReference": 5000,
+    "ImpactDecayMs": 90,
+    "AirCentering": 0.3,
+    "DriftLightening": 0.4,
+    "WreckCentering": 0.2
+  }
+}

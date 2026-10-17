@@ -1,0 +1,23 @@
+SWGR Wheel Bridge is released under the MIT License (see LICENSE.txt). It includes or uses this third-party software.
+
+Included in WheelBridge.exe:
+
+Nefarius.ViGEm.Client 1.21.256: MIT License, Copyright (c) Nefarius Software Solutions e.U.
+  https://github.com/nefarius/ViGEm.NET
+
+Vortice.DirectInput 3.8.3: MIT License, Copyright (c) Amer Koleci and Contributors
+  https://github.com/amerkoleci/Vortice.Windows
+
+.NET runtime: MIT License, Copyright (c) .NET Foundation and Contributors
+  https://github.com/dotnet/runtime
+
+Not included (you get these separately):
+
+MOZA SDK (MOZA_API_CSharp.dll, MOZA_API_C.dll, MOZA_SDK.dll): Copyright (c) MOZA Racing (Gudsen Technology).
+  Proprietary software. It has no licence that permits redistribution, so it is not in this package.
+  The bridge downloads it from MOZA when you ask it to, or you get it from https://mozaracing.com/pages/sdk.
+  Your use of the MOZA SDK is subject to MOZA's terms.
+
+ViGEmBus: BSD-3-Clause, Nefarius Software Solutions e.U.
+UE4SS: MIT License, the UE4SS team.
+MOZA Pit House: MOZA Racing.

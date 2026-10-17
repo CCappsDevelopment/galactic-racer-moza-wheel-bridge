@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+/dist/
+.vs/
+*.user
+
+# Third-party downloads and SDKs (never redistributed: get-moza-sdk.ps1 fetches the MOZA SDK)
+/Tools/
+/Downloads/
+MOZA SDK/
+MOZA_*.dll
+
+# Local work: game dumps, decompiled third-party code, backups, the dev probe mod
+/Backups/
+Dumps/*
+!Dumps/recordings/
+Mods/WheelBridgeProbe/
+
+# Personal settings and data of a dev build (the shipped profiles live in WheelBridge/defaults)
+WheelBridge/wheelbridge.json*
+WheelBridge/profiles/
+WheelBridge/recordings/
+
+# Near-empty test captures
+Dumps/recordings/telemetry_20261013_023607.tsv
+Dumps/recordings/telemetry_20261013_023754.tsv

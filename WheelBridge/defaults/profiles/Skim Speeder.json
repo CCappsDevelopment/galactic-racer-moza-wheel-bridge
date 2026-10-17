@@ -1,0 +1,67 @@
+{
+  "_about": "Shape references from a recorded skim speeder race (2026-10-16): slip p90 6.9 deg, lateral g p90 10.3, impact p99 4500. Tested in game on a MOZA R3 (2026-10-16). Hovers, so less road texture than the car; more air centering for its jumps and knife-edge turns.",
+  "SteeringLockDegrees": 180,
+  "SteeringLinearity": 1,
+  "SteeringAntiDeadzone": 0.31,
+  "InvertSteering": false,
+  "PedalDeadzone": 0.03,
+  "Ffb": {
+    "Layers": {
+      "Centering": {
+        "Gain": 0.5,
+        "Enabled": true
+      },
+      "Aligning": {
+        "Gain": 0.4,
+        "Enabled": true
+      },
+      "Load": {
+        "Gain": 0.4,
+        "Enabled": true
+      },
+      "Damping": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Impacts": {
+        "Gain": 0.8,
+        "Enabled": true
+      },
+      "Scrape": {
+        "Gain": 0.25,
+        "Enabled": true
+      },
+      "Road": {
+        "Gain": 0.2,
+        "Enabled": true
+      },
+      "Engine": {
+        "Gain": 0.15,
+        "Enabled": true
+      },
+      "Boost": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Landing": {
+        "Gain": 0.6,
+        "Enabled": true
+      },
+      "Rumble": {
+        "Gain": 0.25,
+        "Enabled": true
+      },
+      "Lean": {
+        "Gain": 0,
+        "Enabled": true
+      }
+    },
+    "AligningPeakSlipDeg": 6,
+    "LoadReference": 11.5,
+    "ImpactReference": 3200,
+    "ImpactDecayMs": 70,
+    "AirCentering": 0.25,
+    "DriftLightening": 0.5,
+    "WreckCentering": 0.2
+  }
+}

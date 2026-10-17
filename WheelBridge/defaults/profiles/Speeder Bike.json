@@ -1,0 +1,68 @@
+{
+  "_about": "Tuned in game on a MOZA R3 (2026-10-13). Light and quick; slip and load references halved because the bike corners with about half the car's lateral g. Lean layer added 2026-10-16; 0.45 with a lean-in kick made the wheel run away while leaning, so it is now 0.12 and hold-only.",
+  "SteeringLockDegrees": 180,
+  "SteeringLinearity": 1,
+  "SteeringAntiDeadzone": 0.31,
+  "InvertSteering": false,
+  "PedalDeadzone": 0.03,
+  "Ffb": {
+    "Layers": {
+      "Centering": {
+        "Gain": 0.3,
+        "Enabled": true
+      },
+      "Aligning": {
+        "Gain": 0.42,
+        "Enabled": true
+      },
+      "Load": {
+        "Gain": 0.4,
+        "Enabled": true
+      },
+      "Damping": {
+        "Gain": 0.25,
+        "Enabled": true
+      },
+      "Impacts": {
+        "Gain": 0.8,
+        "Enabled": true
+      },
+      "Scrape": {
+        "Gain": 0.2,
+        "Enabled": true
+      },
+      "Road": {
+        "Gain": 0.05,
+        "Enabled": true
+      },
+      "Engine": {
+        "Gain": 0.03,
+        "Enabled": true
+      },
+      "Boost": {
+        "Gain": 0.12,
+        "Enabled": true
+      },
+      "Landing": {
+        "Gain": 0.6,
+        "Enabled": true
+      },
+      "Rumble": {
+        "Gain": 0.25,
+        "Enabled": true
+      },
+      "Lean": {
+        "Gain": 0.12,
+        "Enabled": true
+      }
+    },
+    "LeanReference": 1.0,
+    "AligningPeakSlipDeg": 5,
+    "LoadReference": 6,
+    "ImpactReference": 2200,
+    "ImpactDecayMs": 70,
+    "AirCentering": 0.15,
+    "DriftLightening": 0.5,
+    "WreckCentering": 0.2
+  }
+}

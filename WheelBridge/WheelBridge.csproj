@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- The MOZA native SDK is x64; keep the process x64 so the right DLLs load. -->
+    <PlatformTarget>x64</PlatformTarget>
+    <!-- GUI (WheelBridge.exe with the gui switch). Its global usings are removed so Forms/Drawing names don't leak into the core. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- Controls are built in code, never in the designer, so designer-serialization analysis doesn't apply. -->
+    <NoWarn>$(NoWarn);WFO1000</NoWarn>
+    <MozaSdk>..\Tools\MOZA_SDK_1.0.1.8\SDK_CSharp\x64</MozaSdk>
+    <Version>0.1.0</Version>
+    <Product>SWGR Wheel Bridge</Product>
+    <Description>Wheel input and synthesized force feedback for STAR WARS: Galactic Racer</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Shipped profiles, copied into the user's profiles folder on start (never over an existing one). -->
+    <None Update="defaults\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nefarius.ViGEm.Client" Version="1.21.256" />
+    <PackageReference Include="Vortice.DirectInput" Version="3.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <!--
+    MOZA SDK: proprietary, no redistribution licence, so it is never committed or published. Get it with
+    tools\get-moza-sdk.ps1 (downloads MOZA's official zip into ..\Tools). It is needed to compile (the C# wrapper)
+    and is copied next to dev builds for convenience; release users download it from inside the app (MozaSdk.cs).
+  -->
+  <ItemGroup>
+    <Reference Include="MOZA_API_CSharp">
+      <HintPath>$(MozaSdk)\MOZA_API_CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <None Include="$(MozaSdk)\MOZA_API_CSharp.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" Link="MOZA_API_CSharp.dll" />
+    <None Include="$(MozaSdk)\MOZA_API_C.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" Link="MOZA_API_C.dll" />
+    <None Include="$(MozaSdk)\MOZA_SDK.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" Link="MOZA_SDK.dll" />
+  </ItemGroup>
+
+</Project>
